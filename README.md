@@ -50,4 +50,6 @@ After the data modeling is done, the next step is make migrations with the follo
 After the migrations are created, the next step is to run the migrations with the following command
 `python manage.py migrate`
 
+It's possible to customize the database by adding metadata to the model. 
+
 
