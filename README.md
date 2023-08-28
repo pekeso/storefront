@@ -45,4 +45,9 @@ We also define the data relationships when creating the data model.
 After the data modeling is done, the next step is make migrations with the following command 
 `python manage.py makemigrations`.
 
+## Running the migrations
+
+After the migrations are created, the next step is to run the migrations with the following command
+`python manage.py migrate`
+
 
