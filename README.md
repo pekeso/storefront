@@ -52,4 +52,8 @@ After the migrations are created, the next step is to run the migrations with th
 
 It's possible to customize the database by adding metadata to the model. 
 
+## Generate dummy data
+
+The website mockaroo.com is used to generate dummy data.
+
 
