@@ -56,6 +56,7 @@ class OrderItem(models.Model):
 
 class Address(models.Model):
     street = models.CharField(max_length=255)
+    zip = models.CharField(max_length=255, null=True)
     city = models.CharField(max_length=255)
     customer = models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True) # OneToOneField means that each customer can have only one address, and each address can belong to only one customer
 
