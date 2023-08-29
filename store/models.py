@@ -7,6 +7,8 @@ class Promotion(models.Model):
 
 class Collection(models.Model):
     title = models.CharField(max_length=255)
+    featured_product = models.ForeignKey(
+        'Product', on_delete=models.SET_NULL, null=True, related_name='+')
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
@@ -14,7 +16,7 @@ class Product(models.Model):
     description = models.TextField()
     unit_price = models.DecimalField(max_digits=6, decimal_places=2)
     inventory = models.IntegerField()
-    last_updated = models.DateTimeField(auto_now=True)
+    last_update = models.DateTimeField(auto_now=True)
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT) # ForeignKey means that each product is associated with a single collection, and each collection can be associated with many products
     promotions = models.ManyToManyField(Promotion) # ManyToManyField means that each product can be associated with many promotions, and each promotion can be associated with many products
 
