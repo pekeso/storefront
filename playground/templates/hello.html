@@ -9,5 +9,10 @@
     {% else %} <!-- else statement -->
         <h1>Hello World</h1>
     {% endif %} <!-- end if statement -->
+    <ul>
+        {% for product in products %} <!-- for loop -->
+            <li>{{ product.title }}</li>
+        {% endfor %} <!-- end for loop -->
+    </ul>
 </body>
 </html>
